@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đặc sản Lạng Sơn</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="navbar">
+    <div class="logo">🍊 LangSon Food</div>
+    <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#sanpham">Sản phẩm</a></li>
+        <li><a href="#tintuc">Tin tức</a></li>
+        <li><a href="#lienhe">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<!-- BANNER -->
+<section class="hero">
+    
+</section>
+
+<!-- SẢN PHẨM -->
+<h2 class="title" id="sanpham">Sản phẩm nổi bật</h2>
+<div class="container">
+    {% for p in products %}
+    <div class="card">
+        <img src="{{ p.image }}">
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <div class="price">{{ p.price }}</div>
+
+        <a class="btn"
+           href="https://zalo.me/0123456789?text=Tôi muốn mua {{ p.name }}"
+           target="_blank">
+           Liên hệ Zalo
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- TIN TỨC -->
+<h2 class="title" id="tintuc">Tin tức</h2>
+<div class="news-container">
+    {% for n in news %}
+    <div class="news-card">
+        <img src="{{ n.image }}">
+        <h3>{{ n.title }}</h3>
+        <p>{{ n.content }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- FOOTER -->
+<footer id="lienhe">
+    <p>📞 Zalo: 0123456789</p>
+</footer>
+
+</body>
+</html>
