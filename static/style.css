@@ -82,10 +82,16 @@ body {
 }
 
 .card p {
-    flex-grow: 1; /* Pushes price and buttons to bottom */
+    flex-grow: 1;
     font-size: 14px;
     color: #666;
     margin-bottom: 15px;
+    /* Rút gọn mô tả */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .price {
@@ -239,6 +245,18 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    /* Rút gọn mô tả */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .news-card img {

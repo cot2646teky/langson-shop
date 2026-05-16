@@ -54,7 +54,7 @@
     <div class="news-card">
         <img src="{{ n.image }}">
         <h3>{{ n.title }}</h3>
-        <p>{{ n.content[:80] }}...</p>
+        <p>{{ n.content }}</p>
         <a href="{{ url_for('news_detail', news_id=n.id) }}" class="read-more">Xem thêm →</a>
     </div>
     {% endfor %}
