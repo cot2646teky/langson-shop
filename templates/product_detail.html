@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }} - LangSon Food</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="navbar">
+    <div class="logo">🍊 LangSon Food</div>
+    <ul class="menu">
+        <li><a href="{{ url_for('home') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('home') }}#sanpham">Sản phẩm</a></li>
+        <li><a href="{{ url_for('home') }}#tintuc">Tin tức</a></li>
+        <li><a href="{{ url_for('home') }}#lienhe">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<!-- PRODUCT DETAIL -->
+<div class="detail-container">
+    <div class="detail-card">
+        <div class="detail-image">
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+        </div>
+        <div class="detail-info">
+            <a href="{{ url_for('home') }}" class="back-link">← Quay lại trang chủ</a>
+            <h1>{{ product.name }}</h1>
+            <div class="detail-price">{{ product.price }}</div>
+            <p class="detail-desc">{{ product.desc }}</p>
+            
+            <div class="detail-actions">
+                <a class="btn-large"
+                   href="https://zalo.me/0123456789?text=Tôi muốn mua {{ product.name }}"
+                   target="_blank">
+                   Mua ngay qua Zalo
+                </a>
+            </div>
+            
+            <div class="shipping-info">
+                <p>🚚 Giao hàng toàn quốc</p>
+                <p>🛡️ Kiểm tra hàng trước khi thanh toán</p>
+                <p>📞 Hỗ trợ: 0123456789</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="lienhe">
+    <p>📞 Zalo: 0123456789</p>
+    <p>© 2024 LangSon Food - Đặc sản vùng cao</p>
+</footer>
+
+</body>
+</html>

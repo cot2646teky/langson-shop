@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm sản phẩm mới - LangSon Food</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="navbar">
+    <div class="logo">🍊 LangSon Food</div>
+    <ul class="menu">
+        <li><a href="{{ url_for('home') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('home') }}#sanpham">Sản phẩm</a></li>
+        <li><a href="{{ url_for('home') }}#tintuc">Tin tức</a></li>
+        <li><a href="{{ url_for('contact') }}">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<!-- ADD PRODUCT FORM -->
+<div class="contact-container">
+    <h2 class="title">Thêm sản phẩm đặc sản mới</h2>
+    <div class="form-wrapper-centered">
+        <div class="contact-form">
+            <form action="{{ url_for('add_product') }}" method="POST">
+                <div class="form-group">
+                    <label>Tên sản phẩm</label>
+                    <input type="text" name="name" placeholder="Ví dụ: Vịt quay, Na Chi Lăng..." required>
+                </div>
+                <div class="form-group">
+                    <label>Giá bán</label>
+                    <input type="text" name="price" placeholder="Ví dụ: 350.000đ" required>
+                </div>
+                <div class="form-group">
+                    <label>Link hình ảnh (URL)</label>
+                    <input type="text" name="image" placeholder="Ví dụ: /static/image/1.jfif hoặc link web" required>
+                </div>
+                <div class="form-group">
+                    <label>Mô tả sản phẩm</label>
+                    <textarea name="desc" rows="5" placeholder="Nhập mô tả chi tiết về sản phẩm..." required></textarea>
+                </div>
+                <div class="actions-centered">
+                    <button type="submit" class="btn-large">Lưu sản phẩm</button>
+                    <a href="{{ url_for('home') }}" class="btn-secondary-large">Hủy bỏ</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="lienhe">
+    <p>📞 Zalo: 0123456789</p>
+    <p>© 2024 LangSon Food - Đặc sản vùng cao</p>
+</footer>
+
+</body>
+</html>

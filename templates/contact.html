@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liên hệ - LangSon Food</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="navbar">
+    <div class="logo">🍊 LangSon Food</div>
+    <ul class="menu">
+        <li><a href="{{ url_for('home') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('home') }}#sanpham">Sản phẩm</a></li>
+        <li><a href="{{ url_for('home') }}#tintuc">Tin tức</a></li>
+        <li><a href="{{ url_for('contact') }}">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<!-- CONTACT SECTION -->
+<div class="contact-container">
+    <h2 class="title">Liên hệ với chúng tôi</h2>
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h3>Thông tin liên hệ</h3>
+            <p><strong>📍 Địa chỉ:</strong> Thành phố Lạng Sơn, Tỉnh Lạng Sơn</p>
+            <p><strong>📞 Điện thoại:</strong> 0123456789</p>
+            <p><strong>📧 Email:</strong> info@langsonfood.com</p>
+            <p><strong>⏰ Giờ làm việc:</strong> 08:00 - 22:00 (Hàng ngày)</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-btn">Facebook</a>
+                <a href="#" class="social-btn">Zalo</a>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h3>Gửi lời nhắn</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label>Họ và tên</label>
+                    <input type="text" placeholder="Nhập tên của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="tel" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label>Lời nhắn</label>
+                    <textarea rows="5" placeholder="Bạn muốn nhắn gì với chúng tôi?" required></textarea>
+                </div>
+                <button type="submit" class="btn-large">Gửi tin nhắn</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="lienhe">
+    <p>📞 Zalo: 0123456789</p>
+    <p>© 2024 LangSon Food - Đặc sản vùng cao</p>
+</footer>
+
+</body>
+</html>

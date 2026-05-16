@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ news.title }} - LangSon Food</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="navbar">
+    <div class="logo">🍊 LangSon Food</div>
+    <ul class="menu">
+        <li><a href="{{ url_for('home') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('home') }}#sanpham">Sản phẩm</a></li>
+        <li><a href="{{ url_for('home') }}#tintuc">Tin tức</a></li>
+        <li><a href="{{ url_for('contact') }}">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<!-- NEWS DETAIL -->
+<div class="news-detail-container">
+    <article class="news-article">
+        <header class="news-header">
+            <a href="{{ url_for('home') }}#tintuc" class="back-link">← Quay lại tin tức</a>
+            <h1>{{ news.title }}</h1>
+            <p class="news-date">📅 Đăng ngày: {{ news.date }}</p>
+        </header>
+        
+        <div class="news-image-large">
+            <img src="{{ news.image }}" alt="{{ news.title }}">
+        </div>
+        
+        <div class="news-content">
+            <p>{{ news.content }}</p>
+        </div>
+        
+        <footer class="news-footer">
+            <div class="share-info">
+                <span>Chia sẻ bài viết:</span>
+                <a href="#">Facebook</a> | <a href="#">Zalo</a>
+            </div>
+        </footer>
+    </article>
+</div>
+
+<!-- FOOTER -->
+<footer id="lienhe">
+    <p>📞 Zalo: 0123456789</p>
+    <p>© 2024 LangSon Food - Đặc sản vùng cao</p>
+</footer>
+
+</body>
+</html>
